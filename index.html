@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://use.fontawesome.com/1c1b263357.js"></script>
+  <title>Weightlifting Competition App</title>
+</head>
+<body onload="cdreset()">
+  <div class="container">
+    <h1 id="compName">Weightlifting Competition</h1>
+    <div class="card">
+      <div class="card-content">
+        <div class="row">
+          <div class="col s4">
+            <h3><span id="weightNum">0</span> kg</h3>
+          </div>
+          <div class="col s4">
+            <h3 id="time">00:00</h3>
+          </div>
+          <div class="col">
+            <h3><span id="attNum">0</span> Att.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <h3 id="famName">familyname</h3>
+          </div>
+          <div class="col">
+            <h3 id="givenName">givenname</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button id="nextLifter" class="btn">Next Lifter</button>
+            <button id="startTimer" class="btn">Start</button>
+            <button id="resetTimer" class="btn">Reset</button>
+            <button id="pauseTimer" class="btn">Pause</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="container">
+    <h2>Input Lifter Data</h2>
+    <form action="/lifters" id="lifterForm">
+      <div class="row">
+        <div class="col s6">
+          <div class="input-field">
+            <input type="number" name="weight" id="weight">
+            <label for="weight">Weight</label>
+          </div>
+        </div>
+        <div class="col s6">
+          <div class="input-field">
+            <input type="number" name="attempt" id="attempt #">
+            <label for="attempt">Attempt</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6">
+          <div class="input-field">
+            <input type="text" name="famName" id="famName">
+            <label for="famNam">Family Name</label>
+          </div>
+        </div>
+        <div class="col s6">
+          <div class="input-field">
+            <input type="text" name="givenName" id="givenName">
+            <label for="givenName">Name</label>
+          </div>
+        </div>
+      </div>
+      <button class="btn">Submit</button>
+    </form>
+  </div>
+  <div class="container">
+    <h2>Lifters up next:</h2>
+    <ul id="lifters">
+      
+    </ul>
+    <button class="btn" id="deleteList">Delete Lifter List</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
